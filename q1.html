@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <script>
+  const findRepeatItem = function (arr) {
+  let res = []; //存储结果
+  let temp = []; //存储遍历过的未出现过的值
+  for(let value of arr){
+    if(temp.includes(value)){
+      if(res.includes(value)){
+        continue;
+      }
+      res.push(value);
+    }else{
+      temp.push(value);
+    }
+  }
+  return res; 
+  }
+ </script>
+ <script>
+  arr = [1,2,2,2,2,2,3,3];
+  var res = findRepeatItem(arr);
+  console.log(res);
+ </script>
+  
+</body>
+</html>

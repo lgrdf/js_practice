@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  const removePalindromeSub = function(str) {
+    let n = str.length;
+    let i =0, j=n-1;
+    while(i<j){
+      if(str.charAt(i)!=str.charAt(j)) return 2;
+      i++;j--;
+    }
+    return 1;
+  }
+  </script>
+  <script>
+    str = "b";
+    console.log(removePalindromeSub(str));
+  </script>
+</body>
+</html>
